@@ -1801,7 +1801,7 @@ input[type='range']::-moz-range-thumb {
         <figcaption class="photo-tile__label">Family homes<span>Room for everyone</span></figcaption>
       </figure>
       <figure class="photo-tile">
-        <img src="b69d1176-0042-407d-b95d-f7594440e20e.jpg" alt="Coastal lifestyle on a white-sand beach" loading="lazy" referrerpolicy="no-referrer" onerror="this.style.display='none'">
+        <img src="https://images.unsplash.com/photo-1738023085642-63b93da4988d?auto=format&fit=crop&w=1000&q=70" alt="Jervis Bay beach on the NSW South Coast" loading="lazy" referrerpolicy="no-referrer" onerror="this.style.display='none'">
         <figcaption class="photo-tile__label">Coastal lifestyle<span>The reason guests book</span></figcaption>
       </figure>
     </div>
@@ -1835,7 +1835,7 @@ input[type='range']::-moz-range-thumb {
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Direct line to the founder</li>
         </ul>
         <div class="included-commission">
-          <div class="included-commission__num" id="commission-display">18<small>%</small></div>
+          <div class="included-commission__num" id="commission-display">From 18<small>%</small></div>
           <div class="included-commission__text">
             <strong>All-in commission</strong>
             No annual listing fees. No monthly tech fees. No inflated linen costs. What you see is what you get.
@@ -1858,7 +1858,7 @@ input[type='range']::-moz-range-thumb {
     <div class="fee-cards">
       <div class="fee-card">
         <div class="fee-card__icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg></div>
-        <div class="fee-card__num" id="fee-commission">18%</div>
+        <div class="fee-card__num" id="fee-commission">From 18%</div>
         <div class="fee-card__title">Management commission</div>
         <div class="fee-card__body">A percentage of nightly rate. That's our entire fee for managing the property.</div>
       </div>
@@ -1901,7 +1901,7 @@ input[type='range']::-moz-range-thumb {
         </thead>
         <tbody>
           <tr><td>Real results, published in full</td><td class="col-phh"><span class="check">✓</span></td><td><span class="x">✗</span></td><td><span class="x">✗</span></td><td><span class="x">✗</span></td><td><span class="x">✗</span></td></tr>
-          <tr><td>Management commission</td><td class="col-phh">18%</td><td>18–22%</td><td>18–25%</td><td>20–25%</td><td>0%*</td></tr>
+          <tr><td>Management commission</td><td class="col-phh">From 18%</td><td>18–22%</td><td>18–25%</td><td>20–25%</td><td>0%*</td></tr>
           <tr><td>Annual listing / tech fees</td><td class="col-phh"><span class="check">None</span></td><td><span class="partial">Varies</span></td><td><span class="partial">Varies</span></td><td><span class="partial">Varies</span></td><td>–</td></tr>
           <tr><td>Itemised cleaning at cost</td><td class="col-phh"><span class="check">✓</span></td><td><span class="x">✗</span></td><td><span class="x">✗</span></td><td><span class="x">✗</span></td><td><span class="check">✓</span></td></tr>
           <tr><td>Full written fee breakdown</td><td class="col-phh"><span class="check">✓</span></td><td><span class="x">✗</span></td><td><span class="x">✗</span></td><td><span class="x">✗</span></td><td>–</td></tr>
@@ -2409,8 +2409,8 @@ function applyTweaks() {
   root.style.setProperty('--color-gold', TWEAKS.goldColor);
 
   // commission display everywhere
-  document.getElementById('commission-display').innerHTML = TWEAKS.commissionPct + '<small>%</small>';
-  document.getElementById('fee-commission').textContent = TWEAKS.commissionPct + '%';
+  document.getElementById('commission-display').innerHTML = 'From ' + TWEAKS.commissionPct + '<small>%</small>';
+  document.getElementById('fee-commission').textContent = 'From ' + TWEAKS.commissionPct + '%';
   document.querySelectorAll('.col-phh').forEach(el => {
     if (el.tagName === 'TD' && el.textContent.trim().match(/^From \d+%$/)) {
       el.textContent = 'From ' + TWEAKS.commissionPct + '%';
