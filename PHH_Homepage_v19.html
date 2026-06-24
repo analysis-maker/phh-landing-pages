@@ -399,7 +399,7 @@
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
-    {"@type":"Question","name":"What commission does PHH charge?","acceptedAnswer":{"@type":"Answer","text":"From 18%, competitive, all-inclusive and fully transparent. No annual listing fees, no monthly tech fees and no inflated linen costs, with cleaning itemised at cost."}},
+    {"@type":"Question","name":"What commission does PHH charge?","acceptedAnswer":{"@type":"Answer","text":"18%, competitive, all-inclusive and fully transparent. No annual listing fees, no monthly tech fees and no inflated linen costs, with cleaning itemised at cost."}},
     {"@type":"Question","name":"Are you a licensed real estate agency?","acceptedAnswer":{"@type":"Answer","text":"Yes. PHH is a fully licensed real estate agency with statutory trust accounting, most short-stay competitors are not."}},
     {"@type":"Question","name":"How fast will I hear back?","acceptedAnswer":{"@type":"Answer","text":"Our Australian-based team aims to get back to every owner enquiry promptly, usually within a business day."}},
     {"@type":"Question","name":"Where do you manage properties?","acceptedAnswer":{"@type":"Answer","text":"Across New South Wales, including Sydney, the South Coast, Central Coast, Northern NSW and the Hunter, with Victoria coming soon."}}
@@ -1834,7 +1834,7 @@ input[type='range']::-moz-range-thumb {
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Direct line to the founder</li>
         </ul>
         <div class="included-commission">
-          <div class="included-commission__num" id="commission-display">From 18<small>%</small></div>
+          <div class="included-commission__num" id="commission-display">18<small>%</small></div>
           <div class="included-commission__text">
             <strong>All-in commission</strong>
             No annual listing fees. No monthly tech fees. No inflated linen costs. What you see is what you get.
@@ -1857,7 +1857,7 @@ input[type='range']::-moz-range-thumb {
     <div class="fee-cards">
       <div class="fee-card">
         <div class="fee-card__icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg></div>
-        <div class="fee-card__num" id="fee-commission">From 18%</div>
+        <div class="fee-card__num" id="fee-commission">18%</div>
         <div class="fee-card__title">Management commission</div>
         <div class="fee-card__body">A percentage of nightly rate. That's our entire fee for managing the property.</div>
       </div>
@@ -1900,7 +1900,7 @@ input[type='range']::-moz-range-thumb {
         </thead>
         <tbody>
           <tr><td>Real results, published in full</td><td class="col-phh"><span class="check">✓</span></td><td><span class="x">✗</span></td><td><span class="x">✗</span></td><td><span class="x">✗</span></td><td><span class="x">✗</span></td></tr>
-          <tr><td>Management commission</td><td class="col-phh">From 18%</td><td>18–22%</td><td>18–25%</td><td>20–25%</td><td>0%*</td></tr>
+          <tr><td>Management commission</td><td class="col-phh">18%</td><td>18–22%</td><td>18–25%</td><td>20–25%</td><td>0%*</td></tr>
           <tr><td>Annual listing / tech fees</td><td class="col-phh"><span class="check">None</span></td><td><span class="partial">Varies</span></td><td><span class="partial">Varies</span></td><td><span class="partial">Varies</span></td><td>–</td></tr>
           <tr><td>Itemised cleaning at cost</td><td class="col-phh"><span class="check">✓</span></td><td><span class="x">✗</span></td><td><span class="x">✗</span></td><td><span class="x">✗</span></td><td><span class="check">✓</span></td></tr>
           <tr><td>Full written fee breakdown</td><td class="col-phh"><span class="check">✓</span></td><td><span class="x">✗</span></td><td><span class="x">✗</span></td><td><span class="x">✗</span></td><td>–</td></tr>
@@ -2120,7 +2120,7 @@ input[type='range']::-moz-range-thumb {
     <div class="faq-list">
       <details class="faq-item">
         <summary>What commission does PHH charge?</summary>
-        <p>From 18%, a single, all-inclusive commission for full-service short-stay management, with no annual listing fees, no monthly tech fees and no inflated linen costs. Cleaning is itemised at cost. The exact rate depends on property type, location and length of engagement; we'll quote you in writing during the free appraisal.</p>
+        <p>18%, a single, all-inclusive commission for full-service short-stay management, with no annual listing fees, no monthly tech fees and no inflated linen costs. Cleaning is itemised at cost. The exact rate depends on property type, location and length of engagement; we'll quote you in writing during the free appraisal.</p>
       </details>
       <details class="faq-item">
         <summary>Are you really a licensed real estate agency? Why does that matter?</summary>
@@ -2408,8 +2408,8 @@ function applyTweaks() {
   root.style.setProperty('--color-gold', TWEAKS.goldColor);
 
   // commission display everywhere
-  document.getElementById('commission-display').innerHTML = 'From ' + TWEAKS.commissionPct + '<small>%</small>';
-  document.getElementById('fee-commission').textContent = 'From ' + TWEAKS.commissionPct + '%';
+  document.getElementById('commission-display').innerHTML = TWEAKS.commissionPct + '<small>%</small>';
+  document.getElementById('fee-commission').textContent = TWEAKS.commissionPct + '%';
   document.querySelectorAll('.col-phh').forEach(el => {
     if (el.tagName === 'TD' && el.textContent.trim().match(/^From \d+%$/)) {
       el.textContent = 'From ' + TWEAKS.commissionPct + '%';
